@@ -16,5 +16,11 @@ NS.define('MainController', Prosimity.BaseController.extend({
 
         var view = new TitleScreenView();
         this.view_manager.addView(view);
+    },
+
+    loginAction: function() {
+
+        var view = new LoginView();
+        this.view_manager.addView(view);
     }
 }));
