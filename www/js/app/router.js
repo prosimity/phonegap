@@ -1,8 +1,7 @@
 NS.define('Router', Backbone.Router.extend({
 
     routes: {
-        'stuff': 'stuff',
-        'maincontroller/:action(/:params)': 'main'
+        ':action(/:params)': 'main'
     },
 
     initialize: function() {
@@ -12,11 +11,13 @@ NS.define('Router', Backbone.Router.extend({
 
     main: function(action, param) {
 
-        console.log(action, param);
+        console.info('Route action: ' + action + ' params: ' + param);
 
-        if(!this.main_controller.action) {
+        if(!this.main_controller[action]) {
             throw new Prosimity.Exceptions.RouteException('There is no action "' + action + '" on controller MainController.');
         }
+
+        this.main_controller[action](param);
     }
 
 }));
