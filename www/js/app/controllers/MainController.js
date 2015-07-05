@@ -7,6 +7,7 @@
 NS.define('MainController', Prosimity.BaseController.extend({
 
     loadTitleScreenAction: function() {
-       
+
+
     }
 }));

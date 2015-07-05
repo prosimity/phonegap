@@ -7,4 +7,5 @@
  */
 NS.define('Prosimity.BaseController', Prosimity.BaseFunction.extend({
 
+
 }));

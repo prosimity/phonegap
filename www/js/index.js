@@ -4,7 +4,8 @@
  * @author chris Santos
  */
 document.addEventListener('deviceready', function() {
-    alert('App is ready to go!');
+    new Router();
+    Backbone.history.start({pushState: false});
 }, false);
 
 // Application Constants
