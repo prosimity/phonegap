@@ -6,9 +6,15 @@
  */
 NS.define('MainController', Prosimity.BaseController.extend({
 
+    constructor: function() {
+
+        var main_element = $('.app');
+        this.view_manager = new Prosimity.ViewManager(main_element);
+    },
+
     loadTitleScreenAction: function() {
 
-        console.log('loading title screen action');
-
+        var view = new TitleScreenView();
+        this.view_manager.addView(view);
     }
 }));
