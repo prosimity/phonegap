@@ -156,5 +156,68 @@
         <script type="text/javascript" src="js/app/views/LoginView.js"></script>
 
         <script type="text/javascript" src="js/index.js"></script>
+
+        <!-- Handlebars Templates -->
+
+<script id="header" type="text/template">
+
+    <nav class="tab-bar">
+        <section class="left-small">
+            <a class="left-off-canvas-toggle menu-icon" href="#" aria-expanded="false"><span></span></a>
+        </section>
+
+        <section class="middle tab-bar-section">
+            <h1 class="title">{ PEOPLE AND EVENTS BUTTON HERE }</h1>
+        </section>
+
+        <section class="right-small">
+            <a class="right-off-canvas-toggle menu-icon" href="#" aria-expanded="false"><span></span></a>
+        </section>
+    </nav>
+
+    {{> menus }}
+
+</script>
+
+LOGIN SCREEN
+
+<div>TITLE SCREEN</div>
+
+<script id="menus" type="text\template">
+
+    <aside class="left-off-canvas-menu">
+
+        <ul class="off-canvas-list">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Profile</a>
+            </li>
+            <li>
+                <a href="#">Share</a>
+            </li>
+            <li>
+                <a href="#">Settings</a>
+            </li>
+        </ul>
+    </aside>
+
+    <aside class="right-off-canvas-menu">
+        <ul class="off-canvas-list">
+            <li>
+                <label>Contacts</label>
+            </li>
+            <li>
+                <a href="#">Contact #1</a>
+            </li>
+            <li>
+                <a href="#">Contact #2</a>
+            </li>
+        </ul>
+    </aside>
+
+</script>
+	<!-- /Handlebars Templates -->	
     </body>
 </html>
