@@ -1,3 +1,94 @@
+/* Custom Classes */
+.baby-blue-color {
+    color: #3e8fff;
+}
+.baby-blue-background {
+    background-color: #3e8fff;
+}
+.dark-gray-background {
+    background-color: #909090;
+}
+.white-color {
+    color:#FFF;
+}
+.black-color {
+    color: #000 !important;
+}
+.big-button-text {
+    font-size: 1.1em;
+}
+.medium-button-text {
+    font-size: 0.8em;
+}
+/* Foundation Overrides */
 .main, .inner-wrap {
     height: 100%;
+}
+.tab-bar {
+    background-color:#f2f2f2;
+
+}
+.tab-bar .left-small, .tab-bar .right-small {
+    border:0;
+}
+.tab-bar .menu-icon span:after {
+    box-shadow: 0 0 0 1px #3e8fff, 0 7px 0 1px #3e8fff, 0 14px 0 1px #3e8fff
+}
+.left-off-canvas-menu {
+    background-color: #1a3d6d;
+}
+
+/* Views */
+.swipe-bar {
+    padding: 0.5em 0.5em;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.card {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 1px solid #999;
+    margin: auto;
+    height: 300px;
+    width: 100%;
+}
+
+.card-title {
+    background-color: white;
+    box-shadow: 0px 0px 3px 0px;
+    font-size: 14px;
+    margin: -17px auto 10px;
+    padding: 5px 10px;
+    width: 95%;
+}
+
+.stats {
+    float:right;
+    margin-top:10px;
+    width: 70px;
+}
+.stats .bubble {
+    background-color: #3e8fff;
+    border: 2px solid;
+    border-radius: 30px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12);
+    color: #FFFFFF;
+    height: 60px;
+    padding-top: 4px;
+    margin-bottom: 10px;
+    width: 60px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+}
+.stats .bubble .number {
+    font-size: 22px;
+    margin: 0 auto;
+    text-align: center;
+}
+.stats .bubble .title {
+    font-size: 9px;
+    margin: -6px auto 0;
+    text-align: center;
 }
