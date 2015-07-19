@@ -9,14 +9,16 @@ document.addEventListener('deviceready', function() {
 
     $(document).ready(function() {
         $(document).foundation();
-        $('.profiles').slick({
+        $('.card-container').slick({
+            arrows: false,
             infinite: false,
             useCSS: false,
             cssEase: false,
             swipeToSlide: true,
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 3
         });
+        $('.card-container .card').draggable({axis: 'y'});
     });
 }, false);
 
