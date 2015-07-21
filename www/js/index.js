@@ -4,21 +4,69 @@
  * @author chris Santos
  */
 document.addEventListener('deviceready', function() {
+
+    var animating = false;
+    var current_slide = null;
+
     new Router();
     Backbone.history.start({pushState: false});
 
     $(document).ready(function() {
         $(document).foundation();
-        $('.card-container').slick({
-            arrows: false,
-            infinite: false,
-            useCSS: false,
-            cssEase: false,
-            swipeToSlide: true,
-            slidesToShow: 1,
-            slidesToScroll: 3
+
+        var swiper = new Swiper ('.swiper-container', {
+            loop: false,
+            freeModeSticky: true,
+            speed: 500
         });
-        $('.card-container .card').draggable({axis: 'y'});
+
+        swiper.on('onSliderMove', function () {
+
+            animating = true;
+
+            if(current_slide) {
+                $(current_slide).draggable('destroy');
+                current_slide = null;
+            }
+        });
+
+        swiper.on('onSlideChangeEnd', function () {
+
+            animating = false;
+
+            current_slide = $('.swiper-slide-active');
+            current_slide.draggable({
+                axis: 'y',
+                revert: true,
+                revertDuration: 200,
+                drag: function(event, ui) {
+
+                    if(animating) {
+                        return false;
+                    }
+                }
+            });
+        });
+
+        swiper.on('onTransitionEnd', function () {
+
+            console.log('trans');
+
+            animating = false;
+
+            current_slide = $('.swiper-slide-active');
+            current_slide.draggable({
+                axis: 'y',
+                revert: true,
+                revertDuration: 200,
+                drag: function(event, ui) {
+
+                    if(animating) {
+                        return false;
+                    }
+                }
+            });
+        });
     });
 }, false);
 
