@@ -5,11 +5,13 @@
  */
 document.addEventListener('deviceready', function() {
 
+    Backbone.history.start({pushState: false});
+
+    window.router = new Router();
+    window.router.navigate('title', {trigger: true});
+
     var animating = false;
     var current_slide = null;
-
-    new Router();
-    Backbone.history.start({pushState: false});
 
     $(document).ready(function() {
         $(document).foundation();

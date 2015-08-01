@@ -34,7 +34,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" media="all" href="js/vendors/foundation/css/foundation.css">
         <link rel="stylesheet" href="js/vendors/swiper/dist/css/swiper.min.css">
-        <link rel="stylesheet" href="css/prosimity.css">
+        <link rel="stylesheet" href="scss/prosimity.css">
         <link rel="stylesheet" media="(min-width: 400px)" href="css/prosimity-400.css">
         <link rel="stylesheet" media="(min-width: 600px") href="css/prosimity-600.css">
         <title>Hello World</title>
@@ -58,6 +58,13 @@
 
                 <aside class="left-off-canvas-menu">
                     <ul class="off-canvas-list">
+                        <li class="head">
+                            <div class="circle_pic" style="background-image:url('https://media.licdn.com/mpr/mpr/shrinknp_50_50/p/6/005/092/024/2d3668f.jpg');"></div>
+                            <div class="container">
+                                <div class="name">Christopher Santos</div>
+                                <div class="title">Software architect at Inceptures</div>
+                            </div>
+                        </li>
                         <li>
                             <a href="#">Home</a>
                         </li>
@@ -73,19 +80,7 @@
                     </ul>
                 </aside>
 
-                <aside class="right-off-canvas-menu">
-                    <ul class="off-canvas-list">
-                        <li>
-                            <label>Contacts</label>
-                        </li>
-                        <li>
-                            <a href="#">Contact #1</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact #2</a>
-                        </li>
-                    </ul>
-                </aside>
+                <aside class="right-off-canvas-menu"></aside>
 
                 <section class="main-section">
 
@@ -271,12 +266,11 @@
         <script type="text/javascript" src="js/vendors/foundation/js/vendor/fastclick.js"></script>
         <script type="text/javascript" src="js/vendors/foundation/js/foundation.min.js"></script>
         <!--<script type="text/javascript" src="js/vendors/jso/build/jso.js"></script>-->
-        <script type="text/javascript" src="https://platform.linkedin.com/in.js">
+        <!--<script type="text/javascript" src="https://platform.linkedin.com/in.js">
             api_key:   s7o1Qm7CXPe6wdDP
             authorize: true
-        </script>
+        </script>-->
         <script type="text/javascript" src="js/vendors/swiper/dist/js/swiper.jquery.min.js"></script>
-
 
         <!-- Application -->
         <script type="text/javascript" src="js/app/libs/NS.js"></script>
@@ -293,6 +287,7 @@
         <script type="text/javascript" src="js/app/libs/prosimity/BaseView.js"></script>
         <script type="text/javascript" src="js/app/views/TitleScreenView.js"></script>
         <script type="text/javascript" src="js/app/views/LoginView.js"></script>
+        <script type="text/javascript" src="js/app/views/chat/MessagesView.js"></script>
 
         <script type="text/javascript" src="js/index.js"></script>
 
@@ -325,6 +320,20 @@
 </script>
 
 <div>TITLE SCREEN</div>
+
+<script id="messages-template" type="text/template">
+    <ul class="off-canvas-list">
+        <li>
+            <label>Messages</label>
+        </li>
+        {{#each users}}
+        <li>
+            <a href="#">{{user.name}}</a>
+        </li>
+        {{/each}}
+        <li>
+    </ul>
+</script>
 
 <script id="menus" type="text\template">
 

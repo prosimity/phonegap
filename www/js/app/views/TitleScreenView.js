@@ -2,15 +2,34 @@ NS.define('TitleScreenView', Prosimity.BaseView.extend({
 
     id: 'title-screen',
 
-    initialize: function() {
+    events: {
+        '.right-off-canvas-toggle': 'onRightMenuClick'
+    },
 
-        this.setTemplate(TEMPLATES_DIR + '/title_screen.html')
+
+
+    initialize: function(messages) {
+
+        // This view contains sub-views. We set them up here.
+        var messages_view = new MessagesView([]);
+        $('.right-off-canvas-menu').html(messages_view.$el);
+
         this.render();
     },
 
     render: function() {
 
-        console.log('rendering Title Screen view');
-        this.$el.html(this._template());
+        //this.$el.html(this._template());
+    },
+
+    onRightMenuClick: function(event) {
+
+        var element = $(event.currentTarget);
+
+        if(element.attr('aria-expanded') == 'false') {
+
+        } else {
+
+        }
     }
 }));
