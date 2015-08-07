@@ -1,0 +1,13 @@
+<script id="messages-template" type="text/template">
+    <ul class="off-canvas-list">
+        <li>
+            <label>Messages</label>
+        </li>
+        {{#each users}}
+        <li>
+            <a href="#">{{user.name}}</a>
+        </li>
+        {{/each}}
+        <li>
+    </ul>
+</script>
