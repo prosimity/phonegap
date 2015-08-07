@@ -8,7 +8,7 @@ document.addEventListener('deviceready', function() {
     Backbone.history.start({pushState: false});
 
     window.router = new Router();
-    window.router.navigate('title', {trigger: true});
+    //window.router.navigate('title', {trigger: true});
 
     var animating = false;
     var current_slide = null;
@@ -16,6 +16,17 @@ document.addEventListener('deviceready', function() {
     $(document).ready(function() {
         $(document).foundation();
 
+        // Force the height of the first view if less than the document height.
+        var window_height = $(window).height();
+
+        if($('.main-section').height() < window_height) {
+            $('.main-section').css('height', window_height + 'px');
+        }
+
+        var header_height = $('.tab-bar').height();
+        $('.main-section').css('padding-top', header_height);
+
+        /*
         var swiper = new Swiper ('.swiper-container', {
             loop: false,
             freeModeSticky: true,
@@ -69,6 +80,7 @@ document.addEventListener('deviceready', function() {
                 }
             });
         });
+        */
     });
 }, false);
 

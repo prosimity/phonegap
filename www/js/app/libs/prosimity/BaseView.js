@@ -28,11 +28,13 @@ NS.define('Prosimity.BaseView', Backbone.View.extend({
      */
     router: window.router,
 
-    initialize: function() {
+    constructor: function() {
 
         if(this.template_selector) {
             this.setTemplate(this.template_selector);
         }
+
+        Backbone.View.prototype.constructor.apply(this, arguments);
     },
 
     /*

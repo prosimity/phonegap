@@ -32,7 +32,7 @@ NS.define('Prosimity.ViewManager', Prosimity.BaseFunction.extend({
     /**
      * Adds a view to be managed.
      */
-    addView: function(view, visible, name) {
+    addView: function(view, name, visible) {
 
         name ? this.views[name] = view : this.views[view.el] = view;
 
@@ -50,5 +50,12 @@ NS.define('Prosimity.ViewManager', Prosimity.BaseFunction.extend({
     getView: function(name) {
 
         return this.views[name];
-    }
+    },
+
+    hideAll: function() {
+
+        for(var key in this.views) {
+            this.views[key].hide();
+        };
+    },
 }));

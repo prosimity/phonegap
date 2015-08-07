@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         watch: {
-            files: ['www/js/app/**/*', 'www/css/*.css', 'www/js/index.js'],
+            files: ['www/js/app/**/*', 'www/css/*.css', 'www/scss/*.css', 'www/js/index.js'],
             tasks: ['concat', 'replace:handlebars', 'shell:build_phonegap']
         },
 

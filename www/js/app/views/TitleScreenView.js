@@ -10,6 +10,8 @@ NS.define('TitleScreenView', Prosimity.BaseView.extend({
 
     initialize: function(messages) {
 
+        go();
+
         // This view contains sub-views. We set them up here.
         var messages_view = new MessagesView([]);
         $('.right-off-canvas-menu').html(messages_view.$el);

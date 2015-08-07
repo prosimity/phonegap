@@ -32,7 +32,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" media="all" href="js/vendors/foundation/css/foundation.css">
+        <!--<link rel="stylesheet" media="all" href="js/vendors/foundation/css/foundation.css">-->
         <link rel="stylesheet" href="js/vendors/swiper/dist/css/swiper.min.css">
         <link rel="stylesheet" href="scss/prosimity.css">
         <link rel="stylesheet" media="(min-width: 400px)" href="css/prosimity-400.css">
@@ -42,19 +42,21 @@
     <body>
         <div class="main off-canvas-wrap" data-offcanvas>
             <div class="inner-wrap">
-                <nav class="tab-bar">
-                    <section class="left-small">
-                        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-                    </section>
+                <div class="fixed">
+                    <nav class="tab-bar">
+                        <section class="left-small">
+                            <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                        </section>
 
-                    <section class="middle tab-bar-section">
-                        <h1 class="title black-color">PROsimity</h1>
-                    </section>
+                        <section class="middle tab-bar-section">
+                            <h1 class="title black-color">PROsimity</h1>
+                        </section>
 
-                    <section class="right-small">
-                        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
-                    </section>
-                </nav>
+                        <section class="right-small">
+                            <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                        </section>
+                    </nav>
+                </div>
 
                 <aside class="left-off-canvas-menu">
                     <ul class="off-canvas-list">
@@ -66,16 +68,20 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#">Home</a>
+                            <div class="circle_pic icon"></div>
+                            <a href="#" id="home">Home</a>
                         </li>
                         <li>
-                            <a href="#">Profile</a>
+                            <div class="circle_pic icon"></div>
+                            <a href="#" id="profile">Profile</a>
                         </li>
                         <li>
-                            <a href="#">Share</a>
+                            <div class="circle_pic icon"></div>
+                            <a href="#" id="share">Share</a>
                         </li>
                         <li>
-                            <a href="#">Settings</a>
+                            <div class="circle_pic icon"></div>
+                            <a href="#" id="settings">Settings</a>
                         </li>
                     </ul>
                 </aside>
@@ -84,138 +90,8 @@
 
                 <section class="main-section">
 
-                    <div class="swipe-bar baby-blue-background white-color medium-button-text">Connect</div>
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
-                                <div class="stats">
-                                    <div class="bubble">
-                                        <div class="number">50</div>
-                                        <div class="title">Relevance</div>
-                                    </div>
-                                    <div class="bubble">
-                                        <div class="number">30</div>
-                                        <div class="title">Similarities</div>
-                                    </div>
-                                </div>
-                                <div class="card-title">Software Engineer at Inceptures</div>
-                            </div>
 
-                            <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
-                                <div class="stats">
-                                    <div class="bubble">
-                                        <div class="number">50</div>
-                                        <div class="title">Relevance</div>
-                                    </div>
-                                    <div class="bubble">
-                                        <div class="number">30</div>
-                                        <div class="title">Similarities</div>
-                                    </div>
-                                </div>
-                                <div class="card-title">Software Engineer at Inceptures</div>
-                            </div>
 
-                            <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
-                                <div class="stats">
-                                    <div class="bubble">
-                                        <div class="number">50</div>
-                                        <div class="title">Relevance</div>
-                                    </div>
-                                    <div class="bubble">
-                                        <div class="number">30</div>
-                                        <div class="title">Similarities</div>
-                                    </div>
-                                </div>
-                                <div class="card-title">Software Engineer at Inceptures</div>
-                            </div>
-
-                            <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
-                                <div class="stats">
-                                    <div class="bubble">
-                                        <div class="number">50</div>
-                                        <div class="title">Relevance</div>
-                                    </div>
-                                    <div class="bubble">
-                                        <div class="number">30</div>
-                                        <div class="title">Similarities</div>
-                                    </div>
-                                </div>
-                                <div class="card-title">Software Engineer at Inceptures</div>
-                            </div>
-
-                            <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
-                                <div class="stats">
-                                    <div class="bubble">
-                                        <div class="number">50</div>
-                                        <div class="title">Relevance</div>
-                                    </div>
-                                    <div class="bubble">
-                                        <div class="number">30</div>
-                                        <div class="title">Similarities</div>
-                                    </div>
-                                </div>
-                                <div class="card-title">Software Engineer at Inceptures</div>
-                            </div>
-
-                            <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
-                                <div class="stats">
-                                    <div class="bubble">
-                                        <div class="number">50</div>
-                                        <div class="title">Relevance</div>
-                                    </div>
-                                    <div class="bubble">
-                                        <div class="number">30</div>
-                                        <div class="title">Similarities</div>
-                                    </div>
-                                </div>
-                                <div class="card-title">Software Engineer at Inceptures</div>
-                            </div>
-
-                            <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
-                                <div class="stats">
-                                    <div class="bubble">
-                                        <div class="number">50</div>
-                                        <div class="title">Relevance</div>
-                                    </div>
-                                    <div class="bubble">
-                                        <div class="number">30</div>
-                                        <div class="title">Similarities</div>
-                                    </div>
-                                </div>
-                                <div class="card-title">Software Engineer at Inceptures</div>
-                            </div>
-
-                            <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
-                                <div class="stats">
-                                    <div class="bubble">
-                                        <div class="number">50</div>
-                                        <div class="title">Relevance</div>
-                                    </div>
-                                    <div class="bubble">
-                                        <div class="number">30</div>
-                                        <div class="title">Similarities</div>
-                                    </div>
-                                </div>
-                                <div class="card-title">Software Engineer at Inceptures</div>
-                            </div>
-
-                            <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
-                                <div class="stats">
-                                    <div class="bubble">
-                                        <div class="number">50</div>
-                                        <div class="title">Relevance</div>
-                                    </div>
-                                    <div class="bubble">
-                                        <div class="number">30</div>
-                                        <div class="title">Similarities</div>
-                                    </div>
-                                </div>
-                                <div class="card-title">Software Engineer at Inceptures</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swipe-bar dark-gray-background white-color medium-button-text">Archive</div>
-                    
                     <!--
                     <div>THUMBS UP</div>
                     <div class="profiles">
@@ -265,6 +141,7 @@
         <script type="text/javascript" src="js/vendors/foundation/js/vendor/modernizr.js"></script>
         <script type="text/javascript" src="js/vendors/foundation/js/vendor/fastclick.js"></script>
         <script type="text/javascript" src="js/vendors/foundation/js/foundation.min.js"></script>
+        <script type="text/javascript" src="js/vendors/foundation/js/foundation/foundation.topbar.js"></script>
         <!--<script type="text/javascript" src="js/vendors/jso/build/jso.js"></script>-->
         <!--<script type="text/javascript" src="https://platform.linkedin.com/in.js">
             api_key:   s7o1Qm7CXPe6wdDP
@@ -285,7 +162,9 @@
         <script type="text/javascript" src="js/app/libs/prosimity/exceptions/RouteException.js"></script>
         <!-- Application:Views -->
         <script type="text/javascript" src="js/app/libs/prosimity/BaseView.js"></script>
+        <script type="text/javascript" src="js/app/views/MenuView.js"></script>
         <script type="text/javascript" src="js/app/views/TitleScreenView.js"></script>
+        <script type="text/javascript" src="js/app/views/ProfileView.js"></script>
         <script type="text/javascript" src="js/app/views/LoginView.js"></script>
         <script type="text/javascript" src="js/app/views/chat/MessagesView.js"></script>
 
@@ -319,7 +198,41 @@
     LOGIN SCREEN 2
 </script>
 
-<div>TITLE SCREEN</div>
+<script id="profile-template" type="text/template">
+
+    <div class="settings-section">
+        <div class="title">Profile Summary</div>
+        <textarea id="profile-summary" placeholder="I'm an angel investor looking for the next great startup, let's chat!"></textarea>
+    </div>
+
+    <div class="settings-section">
+        <div class="title">Title</div>
+        <div class="profile-title">Software Architect at Inceptures.</div>
+    </div>
+
+    <div class="settings-section checkbox">
+        <div class="title">Display full name and title.</div>
+        <div class="switch small">
+          <input id="display_title" type="checkbox">
+          <label for="display_title"></label>
+        </div>
+    </div>
+
+    <div class="settings-section profile-tags">
+        <div class="title">Tags</div>
+        <input type="text" id="tag-query" placeholder="Photoshop, SEO, Google, etc" />
+        <div class="panel">
+            <div class="tag-suggestion">PHP<div class="add">+</div></div>
+            <div class="tag-suggestion">Facebook<div class="add">+</div></div>
+            <div class="tag-suggestion">Ruby on Rails<div class="add">+</div></div>
+            <div class="tag-suggestion">Attorney at Law<div class="add">+</div></div>
+        </div>
+    </div>
+</script>
+
+<script id="title-screen-template" type="text/template">
+    <div>TITLE SCREEN</div>
+</script>
 
 <script id="messages-template" type="text/template">
     <ul class="off-canvas-list">
@@ -369,6 +282,140 @@
         </ul>
     </aside>
 
+</script>
+
+<script id="timeline-profile-template" type="text/template">
+    <div class="swipe-bar baby-blue-background white-color medium-button-text">Connect</div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
+                    <div class="stats">
+                        <div class="bubble">
+                            <div class="number">50</div>
+                            <div class="title">Relevance</div>
+                        </div>
+                        <div class="bubble">
+                            <div class="number">30</div>
+                            <div class="title">Similarities</div>
+                        </div>
+                    </div>
+                    <div class="card-title">Software Engineer at Inceptures</div>
+                </div>
+
+                <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
+                    <div class="stats">
+                        <div class="bubble">
+                            <div class="number">50</div>
+                            <div class="title">Relevance</div>
+                        </div>
+                        <div class="bubble">
+                            <div class="number">30</div>
+                            <div class="title">Similarities</div>
+                        </div>
+                    </div>
+                    <div class="card-title">Software Engineer at Inceptures</div>
+                </div>
+
+                <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
+                    <div class="stats">
+                        <div class="bubble">
+                            <div class="number">50</div>
+                            <div class="title">Relevance</div>
+                        </div>
+                        <div class="bubble">
+                            <div class="number">30</div>
+                            <div class="title">Similarities</div>
+                        </div>
+                    </div>
+                    <div class="card-title">Software Engineer at Inceptures</div>
+                </div>
+
+                <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
+                    <div class="stats">
+                        <div class="bubble">
+                            <div class="number">50</div>
+                            <div class="title">Relevance</div>
+                        </div>
+                        <div class="bubble">
+                            <div class="number">30</div>
+                            <div class="title">Similarities</div>
+                        </div>
+                    </div>
+                    <div class="card-title">Software Engineer at Inceptures</div>
+                </div>
+
+                <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
+                    <div class="stats">
+                        <div class="bubble">
+                            <div class="number">50</div>
+                            <div class="title">Relevance</div>
+                        </div>
+                        <div class="bubble">
+                            <div class="number">30</div>
+                            <div class="title">Similarities</div>
+                        </div>
+                    </div>
+                    <div class="card-title">Software Engineer at Inceptures</div>
+                </div>
+
+                <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
+                    <div class="stats">
+                        <div class="bubble">
+                            <div class="number">50</div>
+                            <div class="title">Relevance</div>
+                        </div>
+                        <div class="bubble">
+                            <div class="number">30</div>
+                            <div class="title">Similarities</div>
+                        </div>
+                    </div>
+                    <div class="card-title">Software Engineer at Inceptures</div>
+                </div>
+
+                <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
+                    <div class="stats">
+                        <div class="bubble">
+                            <div class="number">50</div>
+                            <div class="title">Relevance</div>
+                        </div>
+                        <div class="bubble">
+                            <div class="number">30</div>
+                            <div class="title">Similarities</div>
+                        </div>
+                    </div>
+                    <div class="card-title">Software Engineer at Inceptures</div>
+                </div>
+
+                <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
+                    <div class="stats">
+                        <div class="bubble">
+                            <div class="number">50</div>
+                            <div class="title">Relevance</div>
+                        </div>
+                        <div class="bubble">
+                            <div class="number">30</div>
+                            <div class="title">Similarities</div>
+                        </div>
+                    </div>
+                    <div class="card-title">Software Engineer at Inceptures</div>
+                </div>
+
+                <div class="card swiper-slide" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/092/024/2d3668f.jpg');">
+                    <div class="stats">
+                        <div class="bubble">
+                            <div class="number">50</div>
+                            <div class="title">Relevance</div>
+                        </div>
+                        <div class="bubble">
+                            <div class="number">30</div>
+                            <div class="title">Similarities</div>
+                        </div>
+                    </div>
+                    <div class="card-title">Software Engineer at Inceptures</div>
+                </div>
+            </div>
+        </div>
+        <div class="swipe-bar dark-gray-background white-color medium-button-text">Archive</div>
 </script>
 	<!-- /Handlebars Templates -->
     </body>
