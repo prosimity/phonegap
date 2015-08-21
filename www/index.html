@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com https://platform.linkedin.com https://www.linkedin.com https://media.licdn.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com https://platform.linkedin.com https://www.linkedin.com https://media.licdn.com http://localhost:8000 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -151,12 +151,20 @@
 
         <!-- Application -->
         <script type="text/javascript" src="js/app/libs/NS.js"></script>
+        <script type="text/javascript" src="js/app/environment.js"></script>
         <script type="text/javascript" src="js/app/router.js"></script>
         <script type="text/javascript" src="js/app/libs/prosimity/BaseFunction.js"></script>
         <script type="text/javascript" src="js/app/libs/prosimity/ViewManager.js"></script>
+        <!-- Application:Models -->
+        <script type="text/javascript" src="js/app/libs/prosimity/BaseModel.js"></script>
+        <script type="text/javascript" src="js/app/models/User.js"></script>
+        <script type="text/javascript" src="js/app/models/Tag.js"></script>
         <!-- Application:Controllers -->
         <script type="text/javascript" src="js/app/libs/prosimity/BaseController.js"></script>
         <script type="text/javascript" src="js/app/controllers/MainController.js"></script>
+        <!-- Application:Collections -->
+        <script type="text/javascript" src="js/app/libs/prosimity/BaseCollection.js"></script>
+        <script type="text/javascript" src="js/app/collections/TagCollection.js"></script>
         <!-- Application:Exceptions -->
         <script type="text/javascript" src="js/app/libs/prosimity/BaseException.js"></script>
         <script type="text/javascript" src="js/app/libs/prosimity/exceptions/RouteException.js"></script>
@@ -220,12 +228,11 @@
 
     <div class="settings-section profile-tags">
         <div class="title">Tags</div>
-        <input type="text" id="tag-query" placeholder="Photoshop, SEO, Google, etc" />
+        <input type="text" id="tag-query" placeholder="Photoshop, SEO, Google, etc" {{#if tag_query}}value="{{tag_query}}"{{/if}}/>
         <div class="panel">
-            <div class="tag-suggestion">PHP<div class="add">+</div></div>
-            <div class="tag-suggestion">Facebook<div class="add">+</div></div>
-            <div class="tag-suggestion">Ruby on Rails<div class="add">+</div></div>
-            <div class="tag-suggestion">Attorney at Law<div class="add">+</div></div>
+            {{#each tags}}
+            <div class="tag-suggestion">{{name}}<div class="add">+</div></div>
+            {{/each}}
         </div>
     </div>
 </script>

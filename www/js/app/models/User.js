@@ -7,23 +7,31 @@ NS.define('User', Prosimity.BaseModel.extend({
 
 }));
 
-User.createMock = function() {
+/**
+ * Get a hash of the user's settings.
+ *
+ * @param {Function} success
+ * @param {Function} error
+ */
+User.getSettingsService = function(success, error) {
 
-    return new User({
-        id: 1,
-        first_name: 'Ricky',
-        last_name: 'Pisano'
-    });
+    var _success = function(response) {
+        var tags = new TagCollection();
+
+        if(response['complements'] != '') {
+            var s = response['complements'].split("~");
+            s.forEach(function (tag_str) {
+                tags.push({name: tag_str});
+            });
+
+            response['complements'] = tags;
+
+        } else {
+            response['complements'] = null;
+        }
+
+        success(response);
+    };
+
+    this.post('/service/getsettingsService', {}, _success, error);
 };
-
-User.fetchUsersWithChatMessages = function(options) {
-
-    if(options.success) {
-        var messages = [
-            Message.createMock(),
-            Message.createMock(),
-            Message.createMock()
-        ];
-        options.success(messages);
-    }
-}

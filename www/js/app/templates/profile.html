@@ -20,12 +20,11 @@
 
     <div class="settings-section profile-tags">
         <div class="title">Tags</div>
-        <input type="text" id="tag-query" placeholder="Photoshop, SEO, Google, etc" />
+        <input type="text" id="tag-query" placeholder="Photoshop, SEO, Google, etc" {{#if tag_query}}value="{{tag_query}}"{{/if}}/>
         <div class="panel">
-            <div class="tag-suggestion">PHP<div class="add">+</div></div>
-            <div class="tag-suggestion">Facebook<div class="add">+</div></div>
-            <div class="tag-suggestion">Ruby on Rails<div class="add">+</div></div>
-            <div class="tag-suggestion">Attorney at Law<div class="add">+</div></div>
+            {{#each tags}}
+            <div class="tag-suggestion">{{name}}<div class="add">+</div></div>
+            {{/each}}
         </div>
     </div>
 </script>
