@@ -5,6 +5,15 @@
  */
 NS.define('User', Prosimity.BaseModel.extend({
 
+    initialize: function () {
+
+        this.on('change:summary_visibility', this.onSummaryVisibilityChange);
+    },
+
+    onSummaryVisibilityChange: function (model) {
+
+        User.updateSummaryVisibility(model.get('summary_visibility'));
+    }
 }));
 
 /**
@@ -34,4 +43,26 @@ User.getSettingsService = function(success, error) {
     };
 
     this.post('/service/getsettingsService', {}, _success, error);
+};
+
+User.updateSummaryVisibility = function(visible, success, error) {
+
+    var payload = {summary_visibility: visible, complements_visibility: false};
+
+    this.post('/service/updatesummaryVisibility', payload, success, error);
+}
+
+User.current = function() {
+
+    return this.user;
+};
+
+User.getUser = function(success, error) {
+
+    var self = this;
+    var _success = function(response) {
+        self.user = new User(response);
+    };
+
+    this.get('/service/v2/getdetailprofile', {}, _success, error);
 };

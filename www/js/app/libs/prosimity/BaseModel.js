@@ -19,10 +19,16 @@ NS.define('Prosimity.BaseModel', Backbone.Model.extend({
 
         // TODO: throw error if no 'success' or 'error' functions are passed.
 
+        var payload = hash;
+
+        if(type != 'GET') {
+            payload = JSON.stringify(hash);
+        }
+
         $.ajax({
             url: ENV.SERVICE_URL + url,
             contentType: "application/json",
-            data: JSON.stringify(hash),
+            data: payload,
             dataType: 'json',
             type: type,
             success: success,

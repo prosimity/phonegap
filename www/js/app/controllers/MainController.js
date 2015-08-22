@@ -15,6 +15,10 @@ NS.define('MainController', Prosimity.BaseController.extend({
 
         // Setup MenuView and TODO: ChatView
         this.menu_view = new MenuView();
+
+        User.getUser(function(response) {
+
+        });
     },
 
     /**
