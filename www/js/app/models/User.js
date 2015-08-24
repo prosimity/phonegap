@@ -64,5 +64,5 @@ User.getUser = function(success, error) {
         self.user = new User(response);
     };
 
-    this.get('/service/v2/getdetailprofile', {}, _success, error);
+    this.get('/service/v3/users', {}, _success, error);
 };
